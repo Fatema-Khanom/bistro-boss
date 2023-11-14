@@ -13,7 +13,7 @@ const Navbar = () => {
 
     return (
         <>
-            <div className="navbar m-auto bg-opacity-30  bg-black text-white ">
+            <div className="navbar fixed z-10 bg-opacity-30  max-w-screen-xl w-11/12  mx-auto bg-black text-white ">
             <div className="navbar-start">
                 <div className="dropdown">
                 <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -32,7 +32,7 @@ const Navbar = () => {
                 {navOptions}
                 </ul>
             </div>
-                <a className="btn">Get Starded</a>
+                <button className="btn">Get Starded</button>
             </div>
             </div>
         </>
