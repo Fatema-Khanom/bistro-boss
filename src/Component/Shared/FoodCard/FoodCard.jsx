@@ -14,6 +14,30 @@ const FoodCard = ({item}) => {
             if (user && user.email) {
                 //send cart item to the database
 
+                const cartItem = {
+                    menuId: _id,
+                    email: user.email,
+                    name,
+                    image,
+                    price
+                }
+                axiosSecure.post('/carts', cartItem)
+                    .then(res => {
+                        console.log(res.data)
+                        if (res.data.insertedId) {
+                            Swal.fire({
+                                position: "top-end",
+                                icon: "success",
+                                title: `${name} added to your cart`,
+                                showConfirmButton: false,
+                                timer: 1500
+                            });
+                            // refetch cart to update the cart items count
+                            refetch();
+                        }
+    
+                    })
+
             }
 
             else {
