@@ -17,10 +17,11 @@ const Navbar = () => {
     <li><Link to="bashboard">DASHBOARD</Link></li>
     <li><Link to="/menu">OUR MENU</Link></li>
     <li><Link to="/order/salad">OUR SHOP</Link></li>
+     <li><Link to="/login">LOGIN</Link></li>
     <li>
         <Link to="/"> 
             <button className="btn">
-            <FaShoppingCart></FaShoppingCart>
+            <FaShoppingCart className="mr-2"></FaShoppingCart>
             <div className="badge badge-secondary">+0</div>
             </button>
         </Link>
