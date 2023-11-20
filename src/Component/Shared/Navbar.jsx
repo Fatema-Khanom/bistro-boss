@@ -5,6 +5,7 @@ import { FaShoppingCart } from 'react-icons/fa';
 
 const Navbar = () => {
     const {user,logOut}=useContext(AuthContext);
+    
     const handleLogOut=()=>{
         logOut()
         .then(() => { })
@@ -17,7 +18,7 @@ const Navbar = () => {
     <li><Link to="bashboard">DASHBOARD</Link></li>
     <li><Link to="/menu">OUR MENU</Link></li>
     <li><Link to="/order/salad">OUR SHOP</Link></li>
-     <li><Link to="/login">LOGIN</Link></li>
+    
     <li>
         <Link to="/"> 
             <button className="btn">
@@ -29,6 +30,7 @@ const Navbar = () => {
     
     {
         user? <> 
+
          <button onClick={handleLogOut} className="btn btn-active btn-ghost">Ghost</button>
         </> : <>
          <li><Link to="/login">LOGIN</Link></li>
