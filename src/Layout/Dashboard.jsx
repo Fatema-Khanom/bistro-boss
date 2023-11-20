@@ -3,6 +3,7 @@ import { FaAd, FaCalendar, FaHome, FaList, FaSearch, FaShoppingCart } from 'reac
 import { NavLink, Outlet } from 'react-router-dom';
 
 const Dashboard = () => {
+    const [cart] = useCart();
     return (
         <div>
             <div className="w-64 min-h-full bg-orange-400">
